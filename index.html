@@ -3,16 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
     <title>DG-Hortifruti</title>
 </head>
 <body>
-    <h1>
-        
-    </h1>
-    <p>
-       
-    </p>
+    <header id="header">
+        <div class="container header-content">
+            <h1 id="logo">DG <span>Hortifruti</span></h1>
+            <nav id="navbar">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="quemSomos.html" class="nav-link">Quem Somos</a>
+                <a href="form.html" class="nav-link">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="section">
+        <div class="container section-content">
+            <div class="section-text">
+                <h2>Frescor direto da horta para sua mesa</h2>
+                <p>Produtos naturais, selecionados com carinho para você e sua família.</p>
+                <a href="form.html" class="button">Faça seu pedido</a>
+            </div>
+            <div class="section-image">
+                <img src="public/hero-image.jpg" alt="Cesta de frutas e verduras frescas">
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="sobre">
+            <h2>Sobre nós</h2>
+            <p>Na DG Hortifruti, trabalhamos com amor e dedicação para levar até você produtos frescos e saudáveis. Nossa missão é conectar produtores locais a clientes que valorizam qualidade e sustentabilidade.</p>
+        </section>
+
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+            <div class="grid-produtos">
+                <div class="produto-card">
+                    <img src="public/frutas.jpg" alt="Frutas frescas">
+                    <h3>Frutas</h3>
+                    <p>Seleção de frutas da estação, direto do campo.</p>
+                </div>
+                <div class="produto-card">
+                    <img src="public/verduras.jpg" alt="Verduras frescas">
+                    <h3>Verduras</h3>
+                    <p>Hortaliças fresquinhas e cheias de sabor.</p>
+                </div>
+                <div class="produto-card">
+                    <img src="public/legumes.jpg" alt="Legumes frescos">
+                    <h3>Legumes</h3>
+                    <p>Variedade de legumes para receitas nutritivas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2025 DG Hortifruti — Criado por Douglas Barros</p>
+        </div>
+    </footer>
 </body>
 </html>
