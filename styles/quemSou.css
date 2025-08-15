@@ -1,3 +1,4 @@
+
 :root {
     --cor-primaria: #007f3f;
     --cor-secundaria: #f9f9f9;
@@ -55,80 +56,63 @@ body {
     text-decoration: none;
     font-weight: 600;
 }
-#navbar .nav-link:hover {
+#navbar .nav-link:hover,
+#navbar .nav-link.active {
     text-decoration: underline;
-}
-
-#apresentacao {
-    background-color: var(--cor-secundaria);
-    padding: 3rem 0;
-}
-
-.apresentacao-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.apresentacao-text {
-    flex: 1;
-    text-align: center;
-}
-.apresentacao-text h2 {
-    font-size: 2.5rem;
-    color: var(--cor-primaria);
-    margin-bottom: 1rem;
-}
-.apresentacao-text p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.6rem;
-    background-color: var(--cor-primaria);
-    color: var(--cor-letra-secundaria);
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-.btn:hover {
-    background-color: #005f2f;
-    transform: translateY(-2px);
 }
 
 main {
     flex: 1;
 }
 
-#sobre {
-    margin: 3rem 0;
-    text-align: center;
-}
-#sobre h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--cor-primaria);
+.faixa {
+    padding: 3rem 0;
 }
 
-#servicos {
-    margin: 3rem 0;
+.apresentacao-content,
+.sobre-content,
+.contato-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-#servicos h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+
+.apresentacao-text,
+.sobre-text,
+.contato-content {
+    flex: 1;
     text-align: center;
+}
+
+.apresentacao-text h2,
+.sobre-text h2,
+.contato-content h2 {
+    font-size: 2.5rem;
     color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.apresentacao-text p,
+.sobre-text p,
+.contato-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.apresentacao-img img,
+.sobre-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .grid-servicos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .servico-card {
@@ -157,19 +141,62 @@ main {
     font-weight: 600;
 }
 
+.beneficios h2 {
+    text-align: center;
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.beneficios ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+.beneficios li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+.beneficios li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-letra-secundaria);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+    background-color: #005f2f;
+    transform: translateY(-2px);
+}
+
 #footer {
     background-color: var(--cor-primaria);
     color: var(--cor-letra-secundaria);
     text-align: center;
     padding: 1rem 0;
 }
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .apresentacao-content {
+    .apresentacao-content,
+    .sobre-content {
         flex-direction: column;
     }
 
