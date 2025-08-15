@@ -1,3 +1,11 @@
+:root {
+    --cor-primaria: #007f3f;
+    --cor-secundaria: #f9f9f9;
+    --cor-letra-primaria: #333;
+    --cor-letra-secundaria: #fff;
+    --cor-destaque: #ffcc00;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +13,13 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #fdfdfd;
-    color: #333;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-letra-primaria);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-main {
-    flex: 1;
 }
 
 .container {
@@ -25,8 +29,8 @@ main {
 }
 
 #header {
-    background-color: #2e7d32;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-letra-secundaria);
     padding: 1rem 0;
 }
 
@@ -34,101 +38,138 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #logo {
     font-size: 1.8rem;
+    font-weight: 600;
 }
 #logo span {
-    color: #ffd54f;
+    color: var(--cor-destaque);
 }
 
 #navbar .nav-link {
     margin-left: 1rem;
-    color: white;
+    color: var(--cor-letra-secundaria);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 #navbar .nav-link:hover {
     text-decoration: underline;
 }
 
-#section {
-    background-color: #e8f5e9;
-    padding: 2rem 0;
+#hero {
+    background-color: var(--cor-secundaria);
+    padding: 3rem 0;
 }
 
-.section-content {
+.hero-content {
     display: flex;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
-.section-text h2 {
-    font-size: 2rem;
-    color: #2e7d32;
+.hero-text {
+    flex: 1;
+    text-align: center;
+}
+.hero-text h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
 }
 
-.button {
+.btn {
     display: inline-block;
-    padding: 0.7rem 1.5rem;
-    background-color: #2e7d32;
-    color: white;
+    padding: 0.8rem 1.6rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-letra-secundaria);
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
 }
-.button:hover {
-    background-color: #1b5e20;
+.btn:hover {
+    background-color: #005f2f;
+    transform: translateY(-2px);
 }
 
-#produtos {
+main {
+    flex: 1;
+}
+
+#sobre {
+    margin: 3rem 0;
+    text-align: center;
+}
+#sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+#servicos {
     margin: 3rem 0;
 }
-
-.grid-produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+#servicos h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--cor-primaria);
 }
 
-.produto-card {
-    background: white;
-    border-radius: 8px;
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.servico-card {
+    background: var(--cor-letra-secundaria);
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: center;
+    padding: 1rem;
     transition: transform 0.2s;
+    border: 1px solid #e0e0e0;
 }
-.produto-card:hover {
+.servico-card:hover {
     transform: scale(1.03);
 }
-.produto-card img {
+.servico-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    border-radius: 8px;
 }
-.produto-card h3 {
+.servico-card h3 {
     margin: 0.5rem 0;
-    color: #2e7d32;
+    color: var(--cor-primaria);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 #footer {
-    background-color: #2e7d32;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-letra-secundaria);
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
 }
-
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .section-content {
+    .hero-content {
         flex-direction: column;
     }
 
