@@ -32,6 +32,8 @@ Uma landing page desenvolvida para promover serviços de treinamento personaliza
 ---
 
 ## Estrutura do Projeto
+📦inicio
+ ┗ 📜index.html
 📦public
  ┣ 📜acompanhamento.webp
  ┣ 📜consultoria.webp
@@ -44,8 +46,6 @@ Uma landing page desenvolvida para promover serviços de treinamento personaliza
  📦src
  ┣ 📂formulario
  ┃ ┗ 📜form.html
- ┣ 📂inicio
- ┃ ┗ 📜index.html
  ┗ 📂quemSou
  ┃ ┗ 📜quemSou.html
  📦styles
@@ -57,4 +57,4 @@ Uma landing page desenvolvida para promover serviços de treinamento personaliza
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/landing-page-transformacao.git
+   git clone https://github.com/dgbarros/dgpersonalfit.git
